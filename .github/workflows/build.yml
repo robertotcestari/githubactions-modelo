@@ -33,6 +33,6 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           username: root
-          host: 67.205.185.189
+          host: '67.205.185.189'
           key: ${{ secrets.SSH_PASSWORD }}
           script: 'cd /var/www/githubactions && ./server_deploy.sh'
