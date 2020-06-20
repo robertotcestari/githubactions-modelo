@@ -28,3 +28,4 @@ jobs:
           git add -f public/
           git commit -m "Build front-end assets"
           git push -f origin deploy
+          
