@@ -37,4 +37,4 @@ jobs:
           key: ${{ secrets.SSH_PASSWORD }}
           script: 'cd /var/www/githubactions && ./server_deploy.sh'
 
-          
+      
