@@ -35,7 +35,6 @@ jobs:
           username: root
           host: '67.205.185.189'
           key: ${{ secrets.SSH_PASSWORD }}
-          script: 'cd /var/www/githubactions1 && sh server_deploy.sh'
+          script: 'cd /var/www/githubactions && sh server_deploy.sh'
 
-      
       
