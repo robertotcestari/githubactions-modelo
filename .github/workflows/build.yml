@@ -5,7 +5,7 @@ on:
     branches: [production]
 
 jobs:
-  build-js:
+  build-js: 
     name: Build Js/Css
     runs-on: ubuntu-latest
     steps:
@@ -28,4 +28,11 @@ jobs:
           git add -f public/
           git commit -m "Build front-end assets"
           git push -f origin deploy
-          
+
+      - name: Deploy to production
+        uses: appleboy/ssh-action@master
+        with:
+          username: root
+          host: 67.205.185.189
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: 'cd /var/www/html && ./server_deploy.sh'
